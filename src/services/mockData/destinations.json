@@ -1,0 +1,134 @@
+[
+  {
+    "Id": 1,
+    "name": "Paris, France",
+    "country": "France",
+    "image": "https://images.unsplash.com/photo-1502602898536-47ad22581b52",
+    "description": "The City of Light, famous for its art, fashion, and culture",
+    "bestTimeToVisit": "April to June, September to October",
+    "currency": "EUR",
+    "language": "French",
+    "attractions": [
+      {
+        "name": "Eiffel Tower",
+        "description": "Iconic iron lattice tower",
+        "rating": 4.6,
+        "price": "€25"
+      },
+      {
+        "name": "Louvre Museum",
+        "description": "World's largest art museum",
+        "rating": 4.5,
+        "price": "€17"
+      },
+      {
+        "name": "Notre-Dame Cathedral",
+        "description": "Gothic architectural masterpiece",
+        "rating": 4.4,
+        "price": "Free"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Le Comptoir",
+        "cuisine": "French",
+        "rating": 4.8,
+        "priceRange": "$$$"
+      },
+      {
+        "name": "L'As du Fallafel",
+        "cuisine": "Middle Eastern",
+        "rating": 4.3,
+        "priceRange": "$"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "name": "Tokyo, Japan",
+    "country": "Japan",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf",
+    "description": "Modern metropolis blending traditional culture with cutting-edge technology",
+    "bestTimeToVisit": "March to May, September to November",
+    "currency": "JPY",
+    "language": "Japanese",
+    "attractions": [
+      {
+        "name": "Senso-ji Temple",
+        "description": "Ancient Buddhist temple",
+        "rating": 4.4,
+        "price": "Free"
+      },
+      {
+        "name": "Tokyo Skytree",
+        "description": "Tallest structure in Japan",
+        "rating": 4.3,
+        "price": "¥2,060"
+      },
+      {
+        "name": "Meiji Shrine",
+        "description": "Shinto shrine in forest setting",
+        "rating": 4.5,
+        "price": "Free"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Sukiyabashi Jiro",
+        "cuisine": "Sushi",
+        "rating": 4.9,
+        "priceRange": "$$$$"
+      },
+      {
+        "name": "Ramen Nagi",
+        "cuisine": "Ramen",
+        "rating": 4.2,
+        "priceRange": "$"
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "name": "Santorini, Greece",
+    "country": "Greece",
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff",
+    "description": "Stunning island paradise famous for sunsets and white-washed buildings",
+    "bestTimeToVisit": "April to early November",
+    "currency": "EUR",
+    "language": "Greek",
+    "attractions": [
+      {
+        "name": "Oia Village",
+        "description": "Famous for spectacular sunsets",
+        "rating": 4.7,
+        "price": "Free"
+      },
+      {
+        "name": "Red Beach",
+        "description": "Unique red volcanic sand beach",
+        "rating": 4.2,
+        "price": "Free"
+      },
+      {
+        "name": "Akrotiri Archaeological Site",
+        "description": "Ancient Minoan Bronze Age settlement",
+        "rating": 4.3,
+        "price": "€12"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Ambrosia Restaurant",
+        "cuisine": "Greek",
+        "rating": 4.6,
+        "priceRange": "$$$"
+      },
+      {
+        "name": "To Psaraki",
+        "cuisine": "Seafood",
+        "rating": 4.4,
+        "priceRange": "$$"
+      }
+    ]
+  }
+]

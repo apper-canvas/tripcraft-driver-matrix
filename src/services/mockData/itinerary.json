@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "tripId": 1,
+    "day": 1,
+    "time": "09:00",
+    "activity": "Arrival and Hotel Check-in",
+    "location": "Hotel Le Marais",
+    "notes": "Take taxi from CDG airport",
+    "type": "transport"
+  },
+  {
+    "Id": 2,
+    "tripId": 1,
+    "day": 1,
+    "time": "14:00",
+    "activity": "Visit Eiffel Tower",
+    "location": "Champ de Mars",
+    "notes": "Book tickets in advance",
+    "type": "sightseeing"
+  },
+  {
+    "Id": 3,
+    "tripId": 1,
+    "day": 2,
+    "time": "10:00",
+    "activity": "Louvre Museum",
+    "location": "Rue de Rivoli",
+    "notes": "Pre-booked guided tour",
+    "type": "culture"
+  },
+  {
+    "Id": 4,
+    "tripId": 1,
+    "day": 2,
+    "time": "19:30",
+    "activity": "Dinner at Le Comptoir",
+    "location": "6th Arrondissement",
+    "notes": "Reservation confirmed",
+    "type": "dining"
+  },
+  {
+    "Id": 5,
+    "tripId": 2,
+    "day": 1,
+    "time": "12:00",
+    "activity": "Arrive in Tokyo",
+    "location": "Narita Airport",
+    "notes": "Take JR Express to Shibuya",
+    "type": "transport"
+  }
+]

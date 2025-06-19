@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "tripId": 1,
+    "category": "flights",
+    "amount": 649,
+    "description": "Round-trip flight to Paris",
+    "date": "2024-01-15",
+    "currency": "USD"
+  },
+  {
+    "Id": 2,
+    "tripId": 1,
+    "category": "accommodation",
+    "amount": 1323,
+    "description": "Hotel Le Marais - 7 nights",
+    "date": "2024-01-20",
+    "currency": "USD"
+  },
+  {
+    "Id": 3,
+    "tripId": 1,
+    "category": "food",
+    "amount": 125,
+    "description": "Dinner at Le Comptoir",
+    "date": "2024-02-01",
+    "currency": "USD"
+  },
+  {
+    "Id": 4,
+    "tripId": 1,
+    "category": "activities",
+    "amount": 89,
+    "description": "Louvre Museum tickets",
+    "date": "2024-02-01",
+    "currency": "USD"
+  },
+  {
+    "Id": 5,
+    "tripId": 2,
+    "category": "flights",
+    "amount": 899,
+    "description": "Flight to Tokyo",
+    "date": "2024-02-15",
+    "currency": "USD"
+  }
+]

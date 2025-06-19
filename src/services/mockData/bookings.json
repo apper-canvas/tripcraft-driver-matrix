@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "tripId": 1,
+    "type": "flight",
+    "provider": "Air France",
+    "price": 649,
+    "date": "2024-03-15",
+    "status": "confirmed",
+    "details": {
+      "departure": "JFK",
+      "arrival": "CDG",
+      "time": "08:30 - 22:45",
+      "seat": "14A"
+    }
+  },
+  {
+    "Id": 2,
+    "tripId": 1,
+    "type": "hotel",
+    "provider": "Hotel Le Marais",
+    "price": 189,
+    "date": "2024-03-15",
+    "status": "confirmed",
+    "details": {
+      "nights": 7,
+      "room": "Deluxe Double",
+      "checkIn": "2024-03-15",
+      "checkOut": "2024-03-22"
+    }
+  },
+  {
+    "Id": 3,
+    "tripId": 2,
+    "type": "flight",
+    "provider": "Japan Airlines",
+    "price": 899,
+    "date": "2024-05-10",
+    "status": "pending",
+    "details": {
+      "departure": "LAX",
+      "arrival": "NRT",
+      "time": "11:20 - 15:45+1",
+      "seat": "12F"
+    }
+  }
+]

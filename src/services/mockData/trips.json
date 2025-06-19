@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "destination": "Paris, France",
+    "startDate": "2024-03-15",
+    "endDate": "2024-03-22",
+    "budget": 2500,
+    "spent": 1850,
+    "status": "upcoming",
+    "image": "https://images.unsplash.com/photo-1502602898536-47ad22581b52",
+    "description": "Romantic getaway to the City of Light",
+    "travelers": 2
+  },
+  {
+    "Id": 2,
+    "destination": "Tokyo, Japan",
+    "startDate": "2024-05-10",
+    "endDate": "2024-05-20",
+    "budget": 3200,
+    "spent": 450,
+    "status": "planning",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf",
+    "description": "Cultural immersion and culinary adventure",
+    "travelers": 1
+  },
+  {
+    "Id": 3,
+    "destination": "Santorini, Greece",
+    "startDate": "2024-07-05",
+    "endDate": "2024-07-12",
+    "budget": 1800,
+    "spent": 0,
+    "status": "planning",
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff",
+    "description": "Island paradise with stunning sunsets",
+    "travelers": 2
+  },
+  {
+    "Id": 4,
+    "destination": "New York City, USA",
+    "startDate": "2023-12-10",
+    "endDate": "2023-12-15",
+    "budget": 1500,
+    "spent": 1420,
+    "status": "completed",
+    "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9",
+    "description": "Big Apple holiday adventure",
+    "travelers": 3
+  }
+]
