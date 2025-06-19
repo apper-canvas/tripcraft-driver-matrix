@@ -59,17 +59,16 @@ const MyTrips = () => {
     toast.info('Create trip functionality would open a form modal');
   };
 
-  const filteredTrips = trips.filter(trip => {
+const filteredTrips = trips.filter(trip => {
     if (filterStatus === 'all') return true;
     return trip.status === filterStatus;
   });
 
   const getStatsCards = () => {
-    const upcoming = trips.filter(t => t.status === 'upcoming').length;
+const upcoming = trips.filter(t => t.status === 'upcoming').length;
     const planning = trips.filter(t => t.status === 'planning').length;
     const completed = trips.filter(t => t.status === 'completed').length;
-    const totalBudget = trips.reduce((sum, trip) => sum + trip.budget, 0);
-
+    const totalBudget = trips.reduce((sum, trip) => sum + (trip.budget || 0), 0);
     return [
       { label: 'Upcoming Trips', value: upcoming, icon: 'Calendar', color: 'text-accent' },
       { label: 'Planning', value: planning, icon: 'Clock', color: 'text-yellow-600' },

@@ -39,7 +39,7 @@ const Itinerary = () => {
     setLoading(true);
     setError(null);
     try {
-      const [tripData, itineraryData] = await Promise.all([
+const [tripData, itineraryData] = await Promise.all([
         tripService.getById(parseInt(tripId, 10)),
         itineraryService.getByTripId(parseInt(tripId, 10))
       ]);
@@ -60,7 +60,7 @@ const Itinerary = () => {
     }
 
     try {
-      const itemData = {
+const itemData = {
         ...newItem,
         tripId: parseInt(tripId, 10),
         day: selectedDay
@@ -93,8 +93,8 @@ const Itinerary = () => {
 
   const getTripDays = () => {
     if (!trip) return [];
-    const start = parseISO(trip.startDate);
-    const end = parseISO(trip.endDate);
+const start = parseISO(trip.start_date);
+    const end = parseISO(trip.end_date);
     const days = [];
     let current = start;
     let dayNumber = 1;
@@ -184,10 +184,10 @@ const Itinerary = () => {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-display font-bold text-gray-900 mb-2">
-          {trip.destination} Itinerary
+{trip.destination} Itinerary
         </h1>
         <p className="text-gray-600">
-          {format(parseISO(trip.startDate), 'MMM d')} - {format(parseISO(trip.endDate), 'MMM d, yyyy')}
+          {format(parseISO(trip.start_date), 'MMM d')} - {format(parseISO(trip.end_date), 'MMM d, yyyy')}
         </p>
       </div>
 

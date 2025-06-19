@@ -1,27 +1,101 @@
-import destinationsData from '@/services/mockData/destinations.json';
-
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-let destinations = [...destinationsData];
+import { toast } from 'react-toastify';
 
 const destinationService = {
   async getAll() {
-    await delay(300);
-    return [...destinations];
+    try {
+      const { ApperClient } = window.ApperSDK;
+      const apperClient = new ApperClient({
+        apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+        apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+      });
+
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "country" } },
+          { field: { Name: "image" } },
+          { field: { Name: "description" } },
+          { field: { Name: "best_time_to_visit" } },
+          { field: { Name: "currency1" } },
+          { field: { Name: "language" } }
+        ],
+        orderBy: [
+          { fieldName: "Name", sorttype: "ASC" }
+        ]
+      };
+
+      const response = await apperClient.fetchRecords('destination', params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        toast.error(response.message);
+        return [];
+      }
+
+      // Map database field names to UI expected format
+      const mappedData = (response.data || []).map(dest => ({
+        ...dest,
+        bestTimeToVisit: dest.best_time_to_visit,
+        currency: dest.currency1,
+        name: dest.Name
+      }));
+
+      return mappedData;
+    } catch (error) {
+      console.error("Error fetching destinations:", error);
+      toast.error("Failed to load destinations");
+      return [];
+    }
   },
 
   async getById(Id) {
-    await delay(200);
-    const destination = destinations.find(d => d.Id === parseInt(Id, 10));
-    if (!destination) {
-      throw new Error('Destination not found');
+    try {
+      const { ApperClient } = window.ApperSDK;
+      const apperClient = new ApperClient({
+        apperProjectId: import.meta.env.VITE_APPER_PROJECT_ID,
+        apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
+      });
+
+      const params = {
+        fields: [
+          { field: { Name: "Name" } },
+          { field: { Name: "country" } },
+          { field: { Name: "image" } },
+          { field: { Name: "description" } },
+          { field: { Name: "best_time_to_visit" } },
+          { field: { Name: "currency1" } },
+          { field: { Name: "language" } }
+        ]
+      };
+
+      const response = await apperClient.getRecordById('destination', parseInt(Id, 10), params);
+      
+      if (!response.success) {
+        console.error(response.message);
+        toast.error(response.message);
+        throw new Error('Destination not found');
+      }
+
+      // Map database field names to UI expected format
+      const mappedData = {
+        ...response.data,
+        bestTimeToVisit: response.data.best_time_to_visit,
+        currency: response.data.currency1,
+        name: response.data.Name
+      };
+
+      return mappedData;
+    } catch (error) {
+      console.error(`Error fetching destination with ID ${Id}:`, error);
+      throw error;
     }
-    return { ...destination };
   },
 
   async searchFlights(searchParams) {
+    // Mock flight search results - keeping for compatibility
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     await delay(500);
-    // Mock flight search results
+    
     const flights = [
       {
         Id: 1,
@@ -64,8 +138,10 @@ const destinationService = {
   },
 
   async searchHotels(searchParams) {
+    // Mock hotel search results - keeping for compatibility
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     await delay(500);
-    // Mock hotel search results
+    
     const hotels = [
       {
         Id: 1,

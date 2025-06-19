@@ -40,9 +40,9 @@ const Guides = () => {
     setSelectedDestination(destination);
   };
 
-  const filteredDestinations = destinations.filter(dest =>
-    dest.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    dest.country.toLowerCase().includes(searchQuery.toLowerCase())
+const filteredDestinations = destinations.filter(dest =>
+    (dest.name || dest.Name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (dest.country || '').toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const renderDestinationGrid = () => (
@@ -81,8 +81,8 @@ const Guides = () => {
               
               <div className="flex items-center justify-between text-sm text-gray-500">
                 <div className="flex items-center space-x-1">
-                  <ApperIcon name="Calendar" className="w-4 h-4" />
-                  <span>{destination.bestTimeToVisit}</span>
+<ApperIcon name="Calendar" className="w-4 h-4" />
+                  <span>{destination.bestTimeToVisit || destination.best_time_to_visit}</span>
                 </div>
                 <div className="flex items-center space-x-1">
                   <ApperIcon name="MapPin" className="w-4 h-4" />
@@ -93,10 +93,10 @@ const Guides = () => {
               <div className="flex items-center justify-between pt-2 border-t border-gray-100">
                 <div className="flex items-center space-x-2">
                   <Badge variant="secondary" size="sm">
-                    {destination.currency}
+{destination.currency || destination.currency1}
                   </Badge>
                   <Badge variant="primary" size="sm">
-                    {destination.language}
+{destination.language}
                   </Badge>
                 </div>
                 <Button variant="ghost" size="sm" icon="ArrowRight">

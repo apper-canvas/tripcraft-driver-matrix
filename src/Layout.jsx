@@ -1,7 +1,8 @@
-import { Outlet, NavLink, useLocation } from 'react-router-dom';
-import { useState } from 'react';
-import ApperIcon from '@/components/ApperIcon';
-import { routeArray } from '@/config/routes';
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import ApperIcon from "@/components/ApperIcon";
+import { routeArray } from "@/config/routes";
+import { AuthContext } from "./App";
 
 const Layout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -43,8 +44,18 @@ const Layout = () => {
                 >
                   <ApperIcon name={route.icon} className="w-4 h-4" />
                   <span>{route.label}</span>
-                </NavLink>
+</NavLink>
               ))}
+              <button
+                onClick={() => {
+                  const authContext = React.useContext(AuthContext);
+                  if (authContext) authContext.logout();
+                }}
+                className="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-primary hover:bg-primary/5"
+              >
+                <ApperIcon name="LogOut" className="w-4 h-4" />
+                <span>Logout</span>
+              </button>
             </nav>
 
             {/* Mobile Menu Button */}
