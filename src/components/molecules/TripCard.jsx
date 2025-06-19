@@ -6,11 +6,11 @@ import Badge from '@/components/atoms/Badge';
 import Button from '@/components/atoms/Button';
 
 const TripCard = ({ trip, onView, onEdit, onDelete }) => {
-  const startDate = new Date(trip.startDate);
-  const endDate = new Date(trip.endDate);
-  const duration = differenceInDays(endDate, startDate);
-  const budgetProgress = (trip.spent / trip.budget) * 100;
-
+const startDate = trip?.start_date ? new Date(trip.start_date) : null;
+  const endDate = trip?.end_date ? new Date(trip.end_date) : null;
+  const duration = startDate && endDate && !isNaN(startDate) && !isNaN(endDate) ? 
+    differenceInDays(endDate, startDate) : 0;
+  const budgetProgress = (trip?.spent || 0) / (trip?.budget || 1) * 100;
   const getStatusColor = (status) => {
     switch (status) {
       case 'completed': return 'success';
@@ -20,7 +20,8 @@ const TripCard = ({ trip, onView, onEdit, onDelete }) => {
     }
   };
 
-  const getDaysUntil = () => {
+const getDaysUntil = () => {
+    if (!startDate || isNaN(startDate)) return 'Date TBD';
     const today = new Date();
     const daysUntil = differenceInDays(startDate, today);
     if (daysUntil > 0) return `${daysUntil} days until departure`;
@@ -49,8 +50,10 @@ const TripCard = ({ trip, onView, onEdit, onDelete }) => {
           </div>
           <div className="absolute bottom-4 left-4 text-white">
             <h3 className="font-display font-bold text-xl mb-1">{trip.destination}</h3>
-            <p className="text-sm opacity-90">
-              {format(startDate, 'MMM d')} - {format(endDate, 'MMM d, yyyy')}
+<p className="text-sm opacity-90">
+              {startDate && endDate && !isNaN(startDate) && !isNaN(endDate) 
+                ? `${format(startDate, 'MMM d')} - ${format(endDate, 'MMM d, yyyy')}`
+                : 'Date TBD'}
             </p>
           </div>
         </div>

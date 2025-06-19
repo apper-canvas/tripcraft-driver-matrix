@@ -2,8 +2,8 @@
   {
     "Id": 1,
     "destination": "Paris, France",
-    "startDate": "2024-03-15",
-    "endDate": "2024-03-22",
+"start_date": "2024-03-15",
+    "end_date": "2024-03-22",
     "budget": 2500,
     "spent": 1850,
     "status": "upcoming",
@@ -14,8 +14,8 @@
   {
     "Id": 2,
     "destination": "Tokyo, Japan",
-    "startDate": "2024-05-10",
-    "endDate": "2024-05-20",
+"start_date": "2024-05-10",
+    "end_date": "2024-05-20",
     "budget": 3200,
     "spent": 450,
     "status": "planning",
@@ -26,8 +26,8 @@
   {
     "Id": 3,
     "destination": "Santorini, Greece",
-    "startDate": "2024-07-05",
-    "endDate": "2024-07-12",
+"start_date": "2024-07-05",
+    "end_date": "2024-07-12",
     "budget": 1800,
     "spent": 0,
     "status": "planning",
@@ -38,8 +38,8 @@
   {
     "Id": 4,
     "destination": "New York City, USA",
-    "startDate": "2023-12-10",
-    "endDate": "2023-12-15",
+"start_date": "2023-12-10",
+    "end_date": "2023-12-15",
     "budget": 1500,
     "spent": 1420,
     "status": "completed",
